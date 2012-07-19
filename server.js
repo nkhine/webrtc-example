@@ -16,6 +16,7 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
 server.listen(process.env['app_port'] || PORT);
+console.log('Listening on port ' + PORT);
 
 // config
 app.set('views', __dirname + '/views');
