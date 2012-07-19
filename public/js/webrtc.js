@@ -59,8 +59,8 @@ setStatus = function(state) {
  * @return {void}
  */
 openChannel = function() {
-    socket = io.connect('http://localhost:19859/');
-    // socket = io.connect('http://webrtcexample.nodester.com');
+    // socket = io.connect('http://localhost:19859/');
+    socket = io.connect('http://webrtcexample.nodester.com');
 
     socket
       .on('connect', onChannelOpened)
