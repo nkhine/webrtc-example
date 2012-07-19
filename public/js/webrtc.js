@@ -160,12 +160,12 @@ maybeStart = function() {
 createPeerConnection = function() {
   if(typeof webkitPeerConnection === 'function')
     // pc = new webkitPeerConnection("NONE", onSignalingMessage);  
-    // pc = new webkitPeerConnection("STUN stun.1.google.com:19302", onSignalingMessage);  
-    pc = new webkitPeerConnection("TURN 123.123.123.123:12345", onSignalingMessage);  
+    pc = new webkitPeerConnection("STUN stun.1.google.com:19302", onSignalingMessage);  
+    // pc = new webkitPeerConnection("TURN 123.123.123.123:12345", onSignalingMessage);  
   else
     // pc = new webkitDeprecatedPeerConnection("NONE", onSignalingMessage);
-    // pc = new webkitDeprecatedPeerConnection("STUN stun.1.google.com:19302", onSignalingMessage);
-    pc = new webkitDeprecatedPeerConnection("TURN 123.123.123.123:12345", onSignalingMessage);
+    pc = new webkitDeprecatedPeerConnection("STUN stun.1.google.com:19302", onSignalingMessage);
+    // pc = new webkitDeprecatedPeerConnection("TURN 123.123.123.123:12345", onSignalingMessage);
   pc.onconnecting = onSessionConnecting;
   pc.onopen = onSessionOpened;
   pc.onaddstream = onRemoteStreamAdded;
